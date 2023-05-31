@@ -4,6 +4,7 @@ import "../constants/constants.dart";
 class SecondScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    String name = "Data from Second Screen";
     return Scaffold(
       appBar: AppBar(
         title: Text('Second Screen'),
@@ -20,7 +21,7 @@ class SecondScreen extends StatelessWidget {
             ElevatedButton(
               child: Text("Go to Third Screen"),
               onPressed: () {
-                Navigator.pushNamed(context, '/third');
+                Navigator.pushNamed(context, '/third', arguments: name);
               },
             ),
           ],

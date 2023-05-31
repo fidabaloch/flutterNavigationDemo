@@ -5,17 +5,12 @@ class ThirdScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final String data = ModalRoute.of(context)!.settings.arguments as String;
     return Scaffold(
       appBar: AppBar(
         title: Text('Third Screen'),
       ),
-      body: Center(
-          child: ElevatedButton(
-        child: Text('Go to Second Screen'),
-        onPressed: () {
-          Navigator.pop(context);
-        },
-      )),
+      body: Center(child: Text(data)),
     );
   }
 }
